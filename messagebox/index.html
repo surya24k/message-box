@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Me a Question</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="message-box">
+        <div class="avatar"></div>
+        <h2>Ask Me a Question</h2>
+        <input type="text" id="questionInput" placeholder="Type something...">
+        <div class="buttons">
+            <button onclick="handleAccept()">Accept</button>
+            <button onclick="handleDecline()">Decline</button>
+        </div>
+    </div>
+
+    <script>
+        function handleAccept() {
+            const question = document.getElementById('questionInput').value;
+            if (question) {
+                alert(`${question}`);
+            } else {
+                alert('Please type a question first.');
+            }
+        }
+
+        function handleDecline() {
+            document.getElementById('questionInput').value = '';
+            alert('Question declined.');
+        }
+    </script>
+</body>
+</html>
